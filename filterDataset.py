@@ -19,7 +19,6 @@ def filter_columns(sc, path_header, path_dataset, columns):
         dataset = dataset.withColumnRenamed(dataset.columns[i], columns[i])
 
     dataset = dataset.select(columns)
-
     dataset.write.csv('./filteredC.small.training', header=True, mode="overwrite")
 
 
