@@ -10,6 +10,6 @@ if __name__ == "__main__":
     sqlc = SQLContext(sc)
     df = sqlc.read.csv(path_dataset, header=True, sep=",", inferSchema=True)
 
-    print(df)
+    df.show()
 
     sc.stop()
