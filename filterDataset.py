@@ -32,3 +32,5 @@ if __name__ == "__main__":
     columns = ['PSSM_central_1_Y', 'PSSM_r2_4_T', 'PSSM_r1_-3_T', 'PSSM_r1_2_T', 'PSSM_r1_0_I', 'PredSS_central', 'class']
 
     dataset = read_data(sc, path_header, path_dataset)
+
+    sc.stop()
