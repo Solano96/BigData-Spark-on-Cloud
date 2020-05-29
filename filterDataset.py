@@ -6,7 +6,7 @@ def filter_columns(sc, path_header, path_dataset, columns):
 
     # Get header names
     headers = sc.textFile(path_header).collect()
-    inputs = [head for head in headers if "@inputs" in head]
+    columns = [head for head in headers if "@inputs" in head]
     columns = map(str.strip, columns[0].replace('@inputs', '').split(','))
     columns.append('class')
 
