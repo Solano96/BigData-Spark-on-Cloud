@@ -67,20 +67,6 @@ if __name__ == "__main__":
     sc = SparkContext(conf=conf)
 
     path_dataset = './filteredC.small.training'
-
-    sqlc = SQLContext(sc)
-    df = sqlc.read.csv(path_dataset, header=True, sep=",", inferSchema=True)
-
-    preprocess_dataset(df)
-
-    sc.stop()
-
-if __name__ == "__main__":
-    # Create Spark Context with Spark configuration
-    conf = SparkConf().setAppName("Practica 4 - Francisco Solano Lopez Rodriguez")
-    sc = SparkContext(conf=conf)
-
-    path_dataset = './filteredC.small.training'
     columns = ['PSSM_central_1_Y', 'PSSM_r2_4_T', 'PSSM_r1_-3_T', 'PSSM_r1_2_T', 'PSSM_r1_0_I', 'PredSS_central']
 
     sqlc = SQLContext(sc)
