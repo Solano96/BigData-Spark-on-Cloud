@@ -203,9 +203,9 @@ if __name__ == "__main__":
 
     print('Training decision tree models...')
 
-    dt_model_1, dt_params_1 = train_random_forest(df_train, maxDepth = 10, impurity = "gini")
-    dt_model_2, dt_params_2 = train_random_forest(df_train, maxDepth = 10, impurity = "entropy")
-    dt_model_3, dt_params_3 = train_random_forest(df_train, maxDepth = 15, impurity = "gini")
+    dt_model_1, dt_params_1 = train_decision_tree(df_train, maxDepth = 10, impurity = "gini")
+    dt_model_2, dt_params_2 = train_decision_tree(df_train, maxDepth = 10, impurity = "entropy")
+    dt_model_3, dt_params_3 = train_decision_tree(df_train, maxDepth = 15, impurity = "gini")
 
     evaluate(dt_model_1, df_test, 'Decision Tree Classifier', rf_params_1)
     evaluate(dt_model_2, df_test, 'Decision Tree Classifier', rf_params_2)
