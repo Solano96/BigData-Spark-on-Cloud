@@ -124,7 +124,6 @@ def train_decision_tree(df_train, maxDepth = 5, impurity = "gini"):
     """ Train a decision tree model"""
     dt = DecisionTreeClassifier(featuresCol="scaledFeatures",
                                 labelCol="class",
-                                numTrees=numTrees,
                                 maxDepth=maxDepth,
                                 impurity=impurity)
 
