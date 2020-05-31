@@ -189,9 +189,9 @@ if __name__ == "__main__":
 
     # --------------------- RANDOM FOREST CLASSIFIER --------------------- #
 
-    rf_model_1, rf_params_1 = train_random_forest(df_train, numTrees = 50, maxDepth = 10, impurity = "gini")
-    rf_model_2, rf_params_2 = train_random_forest(df_train, numTrees = 100, maxDepth = 10, impurity = "gini")
-    rf_model_3, rf_params_3 = train_random_forest(df_train, numTrees = 100, maxDepth = 15, impurity = "gini")
+    rf_model_1, rf_params_1 = train_random_forest(df_train, numTrees = 10, maxDepth = 10, impurity = "gini")
+    rf_model_2, rf_params_2 = train_random_forest(df_train, numTrees = 20, maxDepth = 10, impurity = "gini")
+    rf_model_3, rf_params_3 = train_random_forest(df_train, numTrees = 20, maxDepth = 15, impurity = "gini")
 
     evaluate(rf_model_1, df_test, 'Random Forest Classifier', rf_params_1)
     evaluate(rf_model_2, df_test, 'Random Forest Classifier', rf_params_2)
@@ -201,8 +201,8 @@ if __name__ == "__main__":
     # --------------------- LOGISTIC REGRESSION --------------------- #
 
     lr_model_1, lr_params_1 = train_logistic_regression(df_train, maxIter=10, regParam=0.1)
-    lr_model_2, lr_params_2 = train_logistic_regression(df_train, maxIter=25, regParam=0.1)
-    lr_model_3, lr_params_3 = train_logistic_regression(df_train, maxIter=25, regParam=0.01)
+    lr_model_2, lr_params_2 = train_logistic_regression(df_train, maxIter=15, regParam=0.1)
+    lr_model_3, lr_params_3 = train_logistic_regression(df_train, maxIter=20, regParam=0.01)
 
     evaluate(lr_model_1, df_test, 'Logistic Regression', lr_params_1)
     evaluate(lr_model_2, df_test, 'Logistic Regression', lr_params_2)
