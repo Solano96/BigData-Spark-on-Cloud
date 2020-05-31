@@ -206,9 +206,9 @@ if __name__ == "__main__":
     dt_model_2, dt_params_2 = train_decision_tree(df_train, maxDepth = 10, impurity = "entropy")
     dt_model_3, dt_params_3 = train_decision_tree(df_train, maxDepth = 15, impurity = "gini")
 
-    evaluate(dt_model_1, df_test, 'Decision Tree Classifier', rf_params_1)
-    evaluate(dt_model_2, df_test, 'Decision Tree Classifier', rf_params_2)
-    evaluate(dt_model_3, df_test, 'Decision Tree Classifier', rf_params_3)
+    evaluate(dt_model_1, df_test, 'Decision Tree Classifier', dt_params_1)
+    evaluate(dt_model_2, df_test, 'Decision Tree Classifier', dt_params_2)
+    evaluate(dt_model_3, df_test, 'Decision Tree Classifier', dt_params_3)
 
     # --------------------- RANDOM FOREST CLASSIFIER --------------------- #
 
